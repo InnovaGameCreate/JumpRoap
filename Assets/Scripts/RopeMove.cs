@@ -13,6 +13,7 @@ public class RopeMove : MonoBehaviour
     [SerializeField] private float hitTime;
 
     private float jumpCount = 0;
+    [SerializeField] private ParticleSystem ps;
 
 
     // Start is called before the first frame update
@@ -40,6 +41,7 @@ public class RopeMove : MonoBehaviour
             _collider.enabled = true;
             yield return new WaitForSeconds(hitTime);
             StaticJumpCount.jumpCount++;
+            ps.Play();
    
         }
     }

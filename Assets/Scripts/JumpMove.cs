@@ -8,6 +8,7 @@ public class JumpMove : MonoBehaviour
     // Start is called before the first frame update
     private Rigidbody rb;
     private bool isGound = false;
+    [SerializeField] private ParticleSystem ps;
     [SerializeField] private float jumpPower;
     private RaycastHit _raycastHit;
     void Start()
@@ -21,6 +22,7 @@ public class JumpMove : MonoBehaviour
             
             rb.AddForce(Vector3.up*jumpPower,ForceMode.Impulse);
             isGound = true;
+            ps.Play();
         }
     }
 
@@ -31,4 +33,5 @@ public class JumpMove : MonoBehaviour
             isGound = false;
         }
     }
+    
 }
