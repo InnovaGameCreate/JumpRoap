@@ -12,7 +12,7 @@ public class RopeMove : MonoBehaviour
     [Header("当たり判定のある時間")]
     [SerializeField] private float hitTime;
 
-    private float jumpCount = 0;
+    //private float jumpCount = 0;
     [SerializeField] private ParticleSystem ps;
 
 
@@ -36,9 +36,9 @@ public class RopeMove : MonoBehaviour
     {
         while(true)
         {
-            _collider.enabled = false;
+            //_collider.enabled = false;
             yield return new WaitForSeconds(interval);
-            _collider.enabled = true;
+            //_collider.enabled = true;
             yield return new WaitForSeconds(hitTime);
             StaticJumpCount.jumpCount++;
             ps.Play();
