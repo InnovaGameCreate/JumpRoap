@@ -25,7 +25,7 @@ public class SceneMover : MonoBehaviour
     IEnumerator SceneCoroutine()
     {
         yield return new WaitForSeconds(1.0f);
-        yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Space));
+        yield return new WaitUntil(() => Input.GetKeyUp(KeyCode.Alpha1));
         SceneChanger();
     }
 
